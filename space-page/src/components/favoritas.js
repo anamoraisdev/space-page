@@ -2,9 +2,9 @@ import React from "react";
 
 const Favoritas = (fotos) => {
     return(
-        <section className="">
-            <img src={fotos.src} className="w-[10rem]"/>
-        </section>
+        <div className="w-44">
+            <img className="" src={fotos.src}/>
+        </div>
     )
 
 }

@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors:{
         corBotao: "#D9D9D94D"
-      }
+      },
     },
   },
   plugins: [],

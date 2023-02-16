@@ -1,21 +1,20 @@
 import React from "react";
 
-const Fotos = ({fotos}) => {
+const Fotos = ({foto, favoritar}) => {
     return(
-        <section className="py-5 flex flex-col">
-            <img src={fotos.src} className="w-[17rem] rounded-r-lg"/>
-            <div className="bg-#04244F] bg-[#04244F] w-[17rem] p-4 rounded-b-lg gap-2 text-gray-200">
-                <p className="font-medium">{fotos.nome}</p>
+        <div className="h-[10%] w-auto">
+            <img src={foto.src} className="w-full object-contain rounded-r-lg"/>
+            <div className="bg-[#04244F] w-full rounded-b-lg text-gray-200 p-4">
+                <p className="font-medium">{foto.nome}</p>
                 <div className="flex justify-between">
                     <p className="text-sm">fonte/fotografo/satelite</p> 
                     <div className="flex gap-2">
-                        <button><img src="./imagens/assets/favorito.png"/></button>
+                        <button onClick={() => favoritar(foto.nome)}><img src="./imagens/assets/favorito.png"/></button>
                         <img src="./imagens/assets/open.png"/>
                     </div>
                 </div>
             </div>
-        </section>
-        
+        </div>
     )
 }
 export default Fotos;
