@@ -127,9 +127,9 @@ function App() {
         categorias={categorias}
         filtrarTags={filtrarTags}
       />
-        <div className="flex justify-between border border-red-500 p-4">
+        <div className="flex justify-between p-4">
           <div className="w-[63%] ml-52">
-            <div className="grid grid-cols-3 gap-6 border border-yellow-500">
+            <div className="grid grid-cols-3 gap-6">
               {fotosFiltradas.map((foto) => foto.favorito === false && (
                 <Fotos
                   foto={foto}
@@ -141,7 +141,7 @@ function App() {
               ))}
             </div>
           </div>
-          <div className="border border-green-500 flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             {fotos.map((foto) => foto.favorito === true && <Favoritas 
               fotos={foto}
               nome={foto.nome}
